@@ -49,7 +49,7 @@ const SOUND_DIR = '../assets/';
 
 // The sound buttons of Free mode, in button order
 const LOOP_SOUNDS = [
-  'demo/1', 'demo/2', 'demo/3', 'demo/4', 'demo/5',
+  'demo/C07-S01-Additive', 'demo/C07-S02-Ghostly-Hum', 'demo/C07-S01-gong', 'demo/C07-S02-Bell', 'demo/C07-S04-Missing',
   'demo/karateka', 'demo/door', 'demo/wall-thump', 'demo/cowbell-minipops',
 ];
 
@@ -58,26 +58,26 @@ const PTC_CREDIT = 'The work has been produced with sounds that were originally 
 
 const SCORES = [
   {
-    title: 'Rain Study I',
+    title: 'Rain Study I',    
     credit: "All recordings by Gabriel Vigliensoni.",
     groups: 4,
     events: [
       // Sound 1 in A, B and C: each group spreads slowly, groups stay together
-      { at: '0:00', groups: 'AB',  play: 'demo/1', ratio: 1.01, fade: 5 },
+      { at: '0:00', groups: 'AB',  play: 'demo/C07-S01-Additive', ratio: 1.01, fade: 5 },
       // The groups start drifting against each other too
       { at: '0:30', spread: 1.04, glide: 30 },
       // At 2:00 sound 2 fades in on D over a minute…
-      { at: '1:00', groups: 'C',    play: 'demo/3', ratio: 1.010, fade: 60 },
-      { at: '1:00', groups: 'D',    play: 'demo/5', ratio: 1.020, fade: 60 },
+      { at: '1:00', groups: 'C',    play: 'demo/C07-S02-Bell', ratio: 1.010, fade: 60 },
+      { at: '1:00', groups: 'D',    play: 'demo/C07-S04-Missing', ratio: 1.020, fade: 60 },
       // …while A, B, C crossfade from sound 1 to sound 2 over the same minute
-      { at: '1:15', groups: 'AB',  stop: 'demo/1', fade: 60 },
-      { at: '2:15', groups: 'A',  play: 'demo/5', ratio: 1.004, fade: 60 },
+      { at: '1:15', groups: 'AB',  stop: 'demo/C07-S02-Ghostly-Hum', fade: 60 },
+      { at: '2:15', groups: 'A',  play: 'demo/C07-S01-gong', ratio: 1.004, fade: 60 },
       // Everyone accelerates inside their group, then everything freezes
       { at: '3:00', groups: 'all',  ratio: 1.03, glide: 20 },
       { at: '4:00', groups: 'all',  ratio: 1.000, glide: 30 },
       { at: '5:00', spread: 1.000, glide: 30 },
       // Sound 3 enters on A and C only, frozen
-      { at: '5:30', groups: 'AC',   play: 'demo/3', fade: 10, level: 0.8 },
+      { at: '5:30', groups: 'AC',   play: 'demo/C07-S02-Bell', fade: 10, level: 0.8 },
       { at: '6:00', groups: 'all',  stop: 'all', fade: 20 },
     ],
     end: '6:20',
